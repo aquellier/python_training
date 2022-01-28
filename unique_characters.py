@@ -1,30 +1,33 @@
 import unittest
-import pdb;
+
 
 def unique_characters(string):
     if len(string) > 128:
-      return False
+        return False
     char_set = [False for _ in range(109000)]
     for c in string:
-      index = ord(c)
-      if char_set[index]:
-        return False
-      char_set[index] = True
+        index = ord(c)
+        if char_set[index]:
+            return False
+        char_set[index] = True
     return True
 
-class Test(unittest.TestCase):
-  test_true = [('ahdjeos'), ('afdsf!çsàé&'), ('')]
-  test_false = [('abfhdsakd'), ('esq= fe'), ('  ')]
-  def test_unique(self):
-    """Should return true if all characters in the string are unique and false otherwise"""
-    for string in self.test_true:
-      self.assertTrue(unique_characters(string))
 
-    for string in self.test_false:
-      self.assertFalse(unique_characters(string))
+class Test(unittest.TestCase):
+    test_true = ['ahdjeos', 'afdsf!çsàé&', '']
+    test_false = ['abfhdsakd', 'esq= fe', ' ']
+
+    def test_unique(self):
+        """Should return true if all characters in the string are unique and false otherwise"""
+        for string in self.test_true:
+            self.assertTrue(unique_characters(string))
+
+        for string in self.test_false:
+            self.assertFalse(unique_characters(string))
+
 
 if __name__ == '__main__':
-  unittest.main()
+    unittest.main()
 
 
 # TAKE AWAY
