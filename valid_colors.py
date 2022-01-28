@@ -4,7 +4,7 @@ import unittest
 def printer_error(s):
     # your code
     valid_colors = [chr(i) for i in range(97, 110)]
-    return f'{sum([1 for letter in s if letter not in valid_colors])}/{len(s)}'
+    return f'{len([letter for letter in s if letter not in valid_colors])}/{len(s)}'
 
 
 class Test(unittest.TestCase):
