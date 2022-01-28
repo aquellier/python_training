@@ -14,8 +14,8 @@ def unique_characters(string):
 
 
 class Test(unittest.TestCase):
-    test_true = ['ahdjeos', 'afdsf!çsàé&', '']
-    test_false = ['abfhdsakd', 'esq= fe', ' ']
+    test_true = ['ahdjeos', 'afds!çàé&', '']
+    test_false = ['abfhdsakd', 'esq= fe', '  ']
 
     def test_unique(self):
         """Should return true if all characters in the string are unique and false otherwise"""
