@@ -3,12 +3,12 @@ import string
 
 
 def is_pangram(s):
-    lowercase = s.lower()
-    for letter in list(string.ascii_lowercase):
-        if letter not in lowercase:
-            return False
-    return True
-    # return set(string.lowercase) <= set(s.lower())
+    # lowercase = s.lower()
+    # for letter in list(string.ascii_lowercase):
+    #     if letter not in lowercase:
+    #         return False
+    # return True
+    return set(string.ascii_lowercase) <= set(s.lower())
 
 
 class Test(unittest.TestCase):
